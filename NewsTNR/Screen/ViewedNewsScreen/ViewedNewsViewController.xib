@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewedNewsViewController" customModule="NewsTNR" customModuleProvider="target">
+            <connections>
+                <outlet property="newsCollectionView" destination="j7J-G8-k87" id="yoV-kd-pH2"/>
+                <outlet property="newsSegmentedControl" destination="SFe-7C-JcJ" id="mZR-z0-dh1"/>
+                <outlet property="view" destination="rTM-t3-2cB" id="cgR-kJ-pgp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rTM-t3-2cB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-7C-JcJ">
+                    <rect key="frame" x="16" y="60" width="382" height="32"/>
+                    <segments>
+                        <segment title="Today"/>
+                        <segment title="Week"/>
+                        <segment title="Month"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="choisePeriod:" destination="-1" eventType="valueChanged" id="gCX-Gl-gCf"/>
+                    </connections>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="j7J-G8-k87">
+                    <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tp5-SG-qBW">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="cKU-1A-W4Y"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="j7J-G8-k87" firstAttribute="top" secondItem="SFe-7C-JcJ" secondAttribute="bottom" constant="16" id="5OD-Wy-eZ9"/>
+                <constraint firstItem="j7J-G8-k87" firstAttribute="trailing" secondItem="cKU-1A-W4Y" secondAttribute="trailing" id="BdH-hr-Hr3"/>
+                <constraint firstItem="j7J-G8-k87" firstAttribute="bottom" secondItem="cKU-1A-W4Y" secondAttribute="bottom" id="G8B-44-u0n"/>
+                <constraint firstItem="j7J-G8-k87" firstAttribute="leading" secondItem="cKU-1A-W4Y" secondAttribute="leading" id="KrO-Er-cK3"/>
+                <constraint firstItem="SFe-7C-JcJ" firstAttribute="top" secondItem="cKU-1A-W4Y" secondAttribute="top" constant="16" id="KtB-bz-cb1"/>
+                <constraint firstItem="SFe-7C-JcJ" firstAttribute="leading" secondItem="cKU-1A-W4Y" secondAttribute="leading" constant="16" id="fJR-OF-E7u"/>
+                <constraint firstItem="cKU-1A-W4Y" firstAttribute="trailing" secondItem="SFe-7C-JcJ" secondAttribute="trailing" constant="16" id="s7t-YN-heo"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

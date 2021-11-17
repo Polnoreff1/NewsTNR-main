@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController" customModule="NewsTNR" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="lc0-LY-bbG" id="BIT-oX-YmQ"/>
+                <outlet property="newsImageView" destination="gHa-Gd-4XQ" id="030-0R-6hx"/>
+                <outlet property="shadowView" destination="Ved-sc-6WF" id="4ym-mV-omz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ved-sc-6WF" userLabel="ShadowView">
+                    <rect key="frame" x="57" y="89" width="300" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gHa-Gd-4XQ">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="BnT-sM-Dt7"/>
+                                <constraint firstAttribute="width" constant="300" id="r8G-yU-GYz"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="gHa-Gd-4XQ" firstAttribute="leading" secondItem="Ved-sc-6WF" secondAttribute="leading" id="3dr-sJ-zLG"/>
+                        <constraint firstAttribute="bottom" secondItem="gHa-Gd-4XQ" secondAttribute="bottom" id="6cQ-bl-x19"/>
+                        <constraint firstItem="gHa-Gd-4XQ" firstAttribute="top" secondItem="Ved-sc-6WF" secondAttribute="top" id="grh-fm-rAw"/>
+                        <constraint firstAttribute="trailing" secondItem="gHa-Gd-4XQ" secondAttribute="trailing" id="iUA-eu-dJv"/>
+                        <constraint firstItem="gHa-Gd-4XQ" firstAttribute="centerX" secondItem="Ved-sc-6WF" secondAttribute="centerX" id="rJC-Li-Q2V"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lc0-LY-bbG">
+                    <rect key="frame" x="36" y="437" width="342" height="26"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="lc0-LY-bbG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="5ug-qp-FmM"/>
+                <constraint firstItem="Ved-sc-6WF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8ZZ-xO-VUA"/>
+                <constraint firstItem="Ved-sc-6WF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="AaK-BM-GKe"/>
+                <constraint firstItem="lc0-LY-bbG" firstAttribute="top" secondItem="Ved-sc-6WF" secondAttribute="bottom" constant="48" id="SwZ-ND-ybG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lc0-LY-bbG" secondAttribute="trailing" constant="36" id="Uph-Hd-5IB"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="140"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

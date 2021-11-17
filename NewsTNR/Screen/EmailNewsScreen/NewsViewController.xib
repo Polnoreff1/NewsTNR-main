@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsViewController" customModule="NewsTNR" customModuleProvider="target">
+            <connections>
+                <outlet property="newsCollectionView" destination="hTc-jP-n9O" id="jRc-QY-iMl"/>
+                <outlet property="newsSegmentedControl" destination="PWg-TV-qnQ" id="KKA-gc-qUA"/>
+                <outlet property="view" destination="Gzg-U5-5JU" id="aky-qQ-OrZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Gzg-U5-5JU">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PWg-TV-qnQ">
+                    <rect key="frame" x="16" y="60" width="382" height="32"/>
+                    <segments>
+                        <segment title="Today"/>
+                        <segment title="Week"/>
+                        <segment title="Month"/>
+                    </segments>
+                    <color key="selectedSegmentTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <action selector="choisePeriod:" destination="-1" eventType="valueChanged" id="vbz-LN-ydt"/>
+                    </connections>
+                </segmentedControl>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="hTc-jP-n9O">
+                    <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kEy-zf-P3T">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fau-iq-Kgo"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="PWg-TV-qnQ" firstAttribute="leading" secondItem="fau-iq-Kgo" secondAttribute="leading" constant="16" id="RPf-5X-CF1"/>
+                <constraint firstItem="hTc-jP-n9O" firstAttribute="top" secondItem="PWg-TV-qnQ" secondAttribute="bottom" constant="16" id="Wva-cV-lsr"/>
+                <constraint firstItem="fau-iq-Kgo" firstAttribute="trailing" secondItem="PWg-TV-qnQ" secondAttribute="trailing" constant="16" id="jYE-u9-zS9"/>
+                <constraint firstItem="hTc-jP-n9O" firstAttribute="bottom" secondItem="fau-iq-Kgo" secondAttribute="bottom" id="wY2-yG-61Y"/>
+                <constraint firstItem="hTc-jP-n9O" firstAttribute="trailing" secondItem="fau-iq-Kgo" secondAttribute="trailing" id="yfD-CE-7s9"/>
+                <constraint firstItem="PWg-TV-qnQ" firstAttribute="top" secondItem="fau-iq-Kgo" secondAttribute="top" constant="16" id="zaQ-Xw-PoL"/>
+                <constraint firstItem="hTc-jP-n9O" firstAttribute="leading" secondItem="fau-iq-Kgo" secondAttribute="leading" id="zxX-NW-psT"/>
+            </constraints>
+            <point key="canvasLocation" x="95.652173913043484" y="97.767857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
